@@ -11,7 +11,21 @@ export const EXERCISES: Exercise[] = [
     defaultSets: 3,
     defaultReps: "8–12",
     cues: "Hold weight close to chest, knees track over mid-foot, torso tall.",
-    mediaKey: "goblet_squat"
+    mediaKey: "goblet_squat",
+    exerciseDbId: "0534",
+    exerciseDbName: "kettlebell goblet squat",
+    exerciseDbBodyPart: "upper legs",
+    exerciseDbTarget: "glutes",
+    exerciseDbEquipment: "kettlebell",
+    exerciseDbSecondaryMuscles: ["quadriceps", "hamstrings", "calves"],
+    exerciseDbInstructions: [
+      "Stand with your feet shoulder-width apart, holding a kettlebell close to your chest with both hands.",
+      "Keeping your chest up and core engaged, lower your body down into a squat position by bending at the knees and hips.",
+      "Continue lowering until your thighs are parallel to the ground, or as low as you can comfortably go.",
+      "Pause for a moment at the bottom, then push through your heels to return to the starting position.",
+      "Repeat for the desired number of repetitions."
+    ],
+    exerciseDbImage180: "https://exercisedb.p.rapidapi.com/image?exerciseId=0534&resolution=180"
   },
   {
     id: "hack_squat_machine",
@@ -35,7 +49,23 @@ export const EXERCISES: Exercise[] = [
     defaultSets: 3,
     defaultReps: "8–12",
     cues: "Don’t let hips lift off pad, push through heels, knees in line with toes.",
-    mediaKey: "leg_press"
+    mediaKey: "leg_press",
+    exerciseDbId: "0760",
+    exerciseDbName: "smith leg press",
+    exerciseDbBodyPart: "upper legs",
+    exerciseDbTarget: "glutes",
+    exerciseDbEquipment: "smith machine",
+    exerciseDbSecondaryMuscles: ["quadriceps", "hamstrings", "calves"],
+    exerciseDbInstructions: [
+      "Adjust the seat and footplate of the smith machine to a comfortable position.",
+      "Sit on the machine with your back against the backrest and your feet shoulder-width apart on the footplate.",
+      "Grasp the handles or sides of the machine for stability.",
+      "Push the footplate away from you by extending your legs, keeping your back against the backrest.",
+      "Pause for a moment at the fully extended position.",
+      "Slowly bend your knees and lower the footplate back towards you, returning to the starting position.",
+      "Repeat for the desired number of repetitions."
+    ],
+    exerciseDbImage180: "https://exercisedb.p.rapidapi.com/image?exerciseId=0760&resolution=180"
   },
   {
     id: "rdl",
@@ -47,7 +77,24 @@ export const EXERCISES: Exercise[] = [
     defaultSets: 3,
     defaultReps: "6–10",
     cues: "Soft knees, push hips back, feel stretch in hamstrings, back stays flat.",
-    mediaKey: "rdl"
+    mediaKey: "rdl",
+    exerciseDbId: "0085",
+    exerciseDbName: "barbell romanian deadlift",
+    exerciseDbBodyPart: "upper legs",
+    exerciseDbTarget: "glutes",
+    exerciseDbEquipment: "barbell",
+    exerciseDbSecondaryMuscles: ["hamstrings", "lower back"],
+    exerciseDbInstructions: [
+      "Stand with your feet shoulder-width apart and your toes pointing forward.",
+      "Hold the barbell with an overhand grip, hands slightly wider than shoulder-width apart.",
+      "Bend at the hips, keeping your back straight and your knees slightly bent.",
+      "Lower the barbell towards the ground, keeping it close to your body.",
+      "Feel the stretch in your hamstrings as you lower the barbell.",
+      "Once you feel a stretch in your hamstrings, push your hips forward and stand up straight.",
+      "Squeeze your glutes at the top of the movement.",
+      "Lower the barbell back down to the starting position and repeat for the desired number of repetitions."
+    ],
+    exerciseDbImage180: "https://exercisedb.p.rapidapi.com/image?exerciseId=0085&resolution=180"
   },
   {
     id: "trap_bar_deadlift",
@@ -59,7 +106,22 @@ export const EXERCISES: Exercise[] = [
     defaultSets: 3,
     defaultReps: "5–8",
     cues: "Chest up, brace core, push floor away, finish tall without leaning back.",
-    mediaKey: "trap_bar_deadlift"
+    mediaKey: "trap_bar_deadlift",
+    exerciseDbId: "0811",
+    exerciseDbName: "trap bar deadlift",
+    exerciseDbBodyPart: "upper legs",
+    exerciseDbTarget: "glutes",
+    exerciseDbEquipment: "trap bar",
+    exerciseDbSecondaryMuscles: ["hamstrings", "quadriceps", "lower back"],
+    exerciseDbInstructions: [
+      "Stand with your feet shoulder-width apart and the trap bar on the ground in front of you.",
+      "Bend at the hips and knees to lower yourself down and grip the handles of the trap bar with an overhand grip.",
+      "Keep your back straight and chest up as you begin to lift the trap bar off the ground by extending your hips and knees.",
+      "As you lift, focus on driving through your heels and squeezing your glutes at the top of the movement.",
+      "Lower the trap bar back down to the ground by bending at the hips and knees, keeping your back straight throughout the movement.",
+      "Repeat for the desired number of repetitions."
+    ],
+    exerciseDbImage180: "https://exercisedb.p.rapidapi.com/image?exerciseId=0811&resolution=180"
   },
   {
     id: "cable_pull_through",
@@ -143,7 +205,22 @@ export const EXERCISES: Exercise[] = [
     defaultSets: 3,
     defaultReps: "8–10",
     cues: "Drive through entire foot on the box, control the way down, avoid pushing off back leg.",
-    mediaKey: "step_up"
+    mediaKey: "step_up",
+    exerciseDbId: "0431",
+    exerciseDbName: "dumbbell step-up",
+    exerciseDbBodyPart: "upper legs",
+    exerciseDbTarget: "glutes",
+    exerciseDbEquipment: "dumbbell",
+    exerciseDbSecondaryMuscles: ["quadriceps", "hamstrings", "calves"],
+    exerciseDbInstructions: [
+      "Stand in front of a bench or step with a dumbbell in each hand, palms facing your body.",
+      "Place your right foot on the bench or step, ensuring your entire foot is in contact with the surface.",
+      "Push through your right heel and lift your body up onto the bench or step, straightening your right leg.",
+      "Bring your left foot up onto the bench or step, standing fully upright.",
+      "Step back down with your left foot, followed by your right foot, returning to the starting position.",
+      "Repeat for the desired number of repetitions, then switch legs."
+    ],
+    exerciseDbImage180: "https://exercisedb.p.rapidapi.com/image?exerciseId=0431&resolution=180"
   },
   {
     id: "single_leg_leg_press",
@@ -191,7 +268,21 @@ export const EXERCISES: Exercise[] = [
     defaultSets: 3,
     defaultReps: "8–12",
     cues: "Full stretch at bottom, pause, then rise onto big toe without bouncing.",
-    mediaKey: "standing_calf_raise"
+    mediaKey: "standing_calf_raise",
+    exerciseDbId: "0605",
+    exerciseDbName: "lever standing calf raise",
+    exerciseDbBodyPart: "lower legs",
+    exerciseDbTarget: "calves",
+    exerciseDbEquipment: "leverage machine",
+    exerciseDbSecondaryMuscles: ["soleus", "ankle stabilizers"],
+    exerciseDbInstructions: [
+      "Adjust the machine to your height and stand with your feet shoulder-width apart.",
+      "Place your shoulders under the pads and hold onto the handles for stability.",
+      "Raise your heels as high as possible by extending your ankles.",
+      "Pause for a moment at the top, then slowly lower your heels back down to the starting position.",
+      "Repeat for the desired number of repetitions."
+    ],
+    exerciseDbImage180: "https://exercisedb.p.rapidapi.com/image?exerciseId=0605&resolution=180"
   },
   {
     id: "seated_calf_raise",
@@ -203,7 +294,22 @@ export const EXERCISES: Exercise[] = [
     defaultSets: 3,
     defaultReps: "10–15",
     cues: "Slow eccentrics, pause at stretch, keep reps smooth.",
-    mediaKey: "seated_calf_raise"
+    mediaKey: "seated_calf_raise",
+    exerciseDbId: "0594",
+    exerciseDbName: "lever seated calf raise",
+    exerciseDbBodyPart: "lower legs",
+    exerciseDbTarget: "calves",
+    exerciseDbEquipment: "leverage machine",
+    exerciseDbSecondaryMuscles: ["soleus", "ankle stabilizers"],
+    exerciseDbInstructions: [
+      "Adjust the seat height so that your knees are slightly bent and your feet are flat on the footplate.",
+      "Place your toes on the footplate with your heels hanging off the edge.",
+      "Grasp the handles or the sides of the seat for stability.",
+      "Push through the balls of your feet to raise your heels as high as possible.",
+      "Pause for a moment at the top, then slowly lower your heels back down to the starting position.",
+      "Repeat for the desired number of repetitions."
+    ],
+    exerciseDbImage180: "https://exercisedb.p.rapidapi.com/image?exerciseId=0594&resolution=180"
   },
   {
     id: "calf_isometric_hold",
@@ -263,7 +369,22 @@ export const EXERCISES: Exercise[] = [
     defaultSets: 3,
     defaultReps: "8–12",
     cues: "Grip just outside shoulders, pull bar to chest, ribs down, no swinging.",
-    mediaKey: "lat_pulldown"
+    mediaKey: "lat_pulldown",
+    exerciseDbId: "0673",
+    exerciseDbName: "reverse grip machine lat pulldown",
+    exerciseDbBodyPart: "back",
+    exerciseDbTarget: "lats",
+    exerciseDbEquipment: "leverage machine",
+    exerciseDbSecondaryMuscles: ["biceps", "forearms"],
+    exerciseDbInstructions: [
+      "Adjust the seat height and position yourself on the machine with your knees under the pads and your feet flat on the ground.",
+      "Grasp the handles with an underhand grip, slightly wider than shoulder-width apart.",
+      "Sit upright with your chest out and shoulders back, maintaining a slight arch in your lower back.",
+      "Pull the handles down towards your chest, squeezing your shoulder blades together.",
+      "Pause for a moment at the bottom of the movement, then slowly release the handles back to the starting position.",
+      "Repeat for the desired number of repetitions."
+    ],
+    exerciseDbImage180: "https://exercisedb.p.rapidapi.com/image?exerciseId=0673&resolution=180"
   },
   {
     id: "one_arm_cable_row",
@@ -335,7 +456,21 @@ export const EXERCISES: Exercise[] = [
     defaultSets: 3,
     defaultReps: "10–15",
     cues: "Soft elbows, raise to just below shoulder height, no swinging.",
-    mediaKey: "lateral_raise"
+    mediaKey: "lateral_raise",
+    exerciseDbId: "0178",
+    exerciseDbName: "cable lateral raise",
+    exerciseDbBodyPart: "shoulders",
+    exerciseDbTarget: "delts",
+    exerciseDbEquipment: "cable",
+    exerciseDbSecondaryMuscles: ["traps", "triceps"],
+    exerciseDbInstructions: [
+      "Stand with your feet shoulder-width apart and grasp the cable handles with an overhand grip.",
+      "Keep your arms straight and your core engaged.",
+      "Raise your arms out to the sides until they are parallel to the floor.",
+      "Pause for a moment at the top, then slowly lower your arms back down to the starting position.",
+      "Repeat for the desired number of repetitions."
+    ],
+    exerciseDbImage180: "https://exercisedb.p.rapidapi.com/image?exerciseId=0178&resolution=180"
   },
   {
     id: "reverse_pec_deck",
@@ -455,7 +590,23 @@ export const EXERCISES: Exercise[] = [
     defaultSets: 3,
     defaultReps: "6–10/side",
     cues: "Lower back gently into floor, exhale as you reach opposite arm and leg.",
-    mediaKey: "dead_bug"
+    mediaKey: "dead_bug",
+    exerciseDbId: "0276",
+    exerciseDbName: "dead bug",
+    exerciseDbBodyPart: "waist",
+    exerciseDbTarget: "abs",
+    exerciseDbEquipment: "body weight",
+    exerciseDbSecondaryMuscles: ["hip flexors", "lower back"],
+    exerciseDbInstructions: [
+      "Lie flat on your back with your arms extended towards the ceiling.",
+      "Bend your knees and lift your legs off the ground, creating a 90-degree angle at your hips and knees.",
+      "Engage your core and lower back to press your lower back into the ground.",
+      "Slowly lower your right arm and left leg towards the ground, keeping them straight and hovering just above the floor.",
+      "Pause for a moment, then return to the starting position.",
+      "Repeat the movement with your left arm and right leg.",
+      "Continue alternating sides for the desired number of repetitions."
+    ],
+    exerciseDbImage180: "https://exercisedb.p.rapidapi.com/image?exerciseId=0276&resolution=180"
   },
   {
     id: "side_plank",
@@ -467,7 +618,21 @@ export const EXERCISES: Exercise[] = [
     defaultSets: 3,
     defaultReps: "20–40s/side",
     cues: "Straight line from ear to ankle, hips high, don’t let shoulder shrug.",
-    mediaKey: "side_plank"
+    mediaKey: "side_plank",
+    exerciseDbId: "3544",
+    exerciseDbName: "bodyweight incline side plank",
+    exerciseDbBodyPart: "waist",
+    exerciseDbTarget: "abs",
+    exerciseDbEquipment: "body weight",
+    exerciseDbSecondaryMuscles: ["obliques", "shoulders"],
+    exerciseDbInstructions: [
+      "Start by lying on your side with your legs extended and stacked on top of each other.",
+      "Place your forearm on the ground directly below your shoulder, with your elbow bent at a 90-degree angle.",
+      "Engage your core and lift your hips off the ground, creating a straight line from your head to your feet.",
+      "Hold this position for the desired amount of time.",
+      "Lower your hips back down to the ground and repeat on the other side."
+    ],
+    exerciseDbImage180: "https://exercisedb.p.rapidapi.com/image?exerciseId=3544&resolution=180"
   },
   {
     id: "pallof_press",
@@ -479,7 +644,25 @@ export const EXERCISES: Exercise[] = [
     defaultSets: 3,
     defaultReps: "8–12/side",
     cues: "Stand tall, press arms straight, resist cable pulling you in.",
-    mediaKey: "pallof_press"
+    mediaKey: "pallof_press",
+    exerciseDbId: "0979",
+    exerciseDbName: "band horizontal pallof press",
+    exerciseDbBodyPart: "waist",
+    exerciseDbTarget: "abs",
+    exerciseDbEquipment: "band",
+    exerciseDbSecondaryMuscles: ["obliques", "glutes"],
+    exerciseDbInstructions: [
+      "Attach the band to a sturdy anchor point at waist height.",
+      "Stand perpendicular to the anchor point with your feet shoulder-width apart.",
+      "Grasp the band handle with both hands and step away from the anchor point to create tension in the band.",
+      "Bring your hands to your chest, keeping your elbows bent and close to your body.",
+      "Engage your core and maintain a stable stance.",
+      "Extend your arms straight out in front of you, pushing the band away from your body.",
+      "Hold the extended position for a few seconds, focusing on maintaining tension in your core.",
+      "Slowly bring your hands back to your chest, resisting the pull of the band.",
+      "Repeat for the desired number of repetitions."
+    ],
+    exerciseDbImage180: "https://exercisedb.p.rapidapi.com/image?exerciseId=0979&resolution=180"
   },
   {
     id: "suitcase_carry",

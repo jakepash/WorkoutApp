@@ -23,6 +23,15 @@ export interface Exercise {
   defaultReps: string;
   cues: string;
   mediaKey?: string;
+  gifUrl?: string;
+  exerciseDbName?: string;
+  exerciseDbId?: string;
+  exerciseDbBodyPart?: string;
+  exerciseDbTarget?: string;
+  exerciseDbEquipment?: string;
+  exerciseDbImage180?: string;
+  exerciseDbSecondaryMuscles?: string[];
+  exerciseDbInstructions?: string[];
 }
 
 export interface WorkoutSection {
@@ -54,4 +63,38 @@ export interface ExerciseLogEntry {
 
 export interface ExerciseLogState {
   [exerciseId: string]: ExerciseLogEntry[];
+}
+
+export interface WorkoutExerciseEntry {
+  exerciseId: string;
+  date: string;
+  sets: SetEntry[];
+}
+
+export interface WorkoutLog {
+  id: string;
+  startedAt: string;
+  endedAt?: string;
+  entries: SessionExerciseEntry[];
+  note?: string;
+  name?: string;
+  effort?: string;
+  mood?: string;
+  workoutDate?: string;
+  durationSeconds?: number;
+}
+
+export interface CustomExerciseInput {
+  id: string;
+  name: string;
+  bodyPart?: string;
+  equipment?: string;
+  notes?: string;
+  gifUrl?: string;
+}
+
+export interface WorkoutBuilderDraft {
+  name: string;
+  exercises: CustomExerciseInput[];
+  note?: string;
 }

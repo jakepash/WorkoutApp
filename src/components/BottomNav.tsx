@@ -3,6 +3,7 @@ import React from "react";
 
 const tabs = [
   { to: "/", label: "Workouts", icon: "🏋️" },
+  { to: "/builder", label: "Builder", icon: "🛠️" },
   { to: "/history", label: "History", icon: "🕑" }
 ];
 

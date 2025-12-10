@@ -4,6 +4,7 @@ import WorkoutDetailPage from "./pages/WorkoutDetailPage";
 import ExerciseDetailPage from "./pages/ExerciseDetailPage";
 import HistoryPage from "./pages/HistoryPage";
 import BottomNav from "./components/BottomNav";
+import WorkoutBuilderPage from "./pages/WorkoutBuilderPage";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/workout/:workoutId" element={<WorkoutDetailPage />} />
           <Route path="/exercise/:exerciseId" element={<ExerciseDetailPage />} />
+          <Route path="/builder" element={<WorkoutBuilderPage />} />
           <Route path="/history" element={<HistoryPage />} />
         </Routes>
       </main>
