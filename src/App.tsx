@@ -6,6 +6,7 @@ import HistoryPage from "./pages/HistoryPage";
 import BottomNav from "./components/BottomNav";
 import WorkoutBuilderPage from "./pages/WorkoutBuilderPage";
 import AiTestPage from "./pages/AiTestPage";
+import AiBuilderPage from "./pages/AiBuilderPage";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/builder" element={<WorkoutBuilderPage />} />
           <Route path="/history" element={<HistoryPage />} />
           <Route path="/ai-test" element={<AiTestPage />} />
+          <Route path="/ai-builder" element={<AiBuilderPage />} />
         </Routes>
       </main>
       <BottomNav />

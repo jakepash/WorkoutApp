@@ -6,9 +6,7 @@ const AI_API_URL = "/api/ai";
 async function postAI(request: AIRequest): Promise<AIResponse> {
   const response = await fetch(AI_API_URL, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(request)
   });
 
@@ -27,22 +25,20 @@ export async function generateJson<T>(options: {
 }): Promise<{ data: T; raw: AIResponse }> {
   const { purpose, systemPrompt, userPrompt, preset } = options;
 
-  const jsonSystemHint = "Respond ONLY with valid JSON. Do not include any explanation or markdown.";
-
-  const messages = [];
-  messages.push({ role: "system", content: jsonSystemHint } as const);
-  if (systemPrompt) {
-    messages.push({ role: "system", content: systemPrompt } as const);
-  }
-  messages.push({ role: "user", content: userPrompt } as const);
+  const jsonSystemHint =
+    "You are a JSON-only API. Respond ONLY with valid JSON. Do not include any explanation or markdown.";
 
   const modelConfig = getModelConfig(preset);
 
   const request: AIRequest = {
     purpose,
-    messages,
     provider: modelConfig.provider,
-    model: modelConfig.model
+    model: modelConfig.model,
+    messages: [
+      { role: "system", content: jsonSystemHint },
+      ...(systemPrompt ? [{ role: "system", content: systemPrompt as string }] : []),
+      { role: "user", content: userPrompt }
+    ]
   };
 
   const response = await postAI(request);

@@ -2,14 +2,20 @@ import { Link } from "react-router-dom";
 import Card from "../components/Card";
 import Tag from "../components/Tag";
 import { WORKOUT_TEMPLATES } from "../data/workouts";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ExerciseLogContext } from "../context/ExerciseLogContext";
 import { formatDisplayDate } from "../utils/date";
-import { useState } from "react";
-import Button from "../components/Button";
+import { AiWorkoutPlan } from "../ai/workoutPlanning";
+import { loadAiPlan } from "../storage";
 
 const HomePage = () => {
   const { activeWorkout, startWorkout, endWorkout } = useContext(ExerciseLogContext);
+  const [aiPlan, setAiPlan] = useState<AiWorkoutPlan | null>(null);
+
+  useEffect(() => {
+    const plan = loadAiPlan();
+    setAiPlan(plan);
+  }, []);
   const [showFinish, setShowFinish] = useState(false);
   const [finishName, setFinishName] = useState("");
   const [finishNote, setFinishNote] = useState("");
@@ -70,8 +76,76 @@ const HomePage = () => {
           >
             Open workout builder
           </Link>
+          <Link
+            to="/ai-builder"
+            className="rounded-lg border border-blue-200 bg-white px-3 py-2 text-xs font-semibold text-blue-700"
+          >
+            AI builder
+          </Link>
         </div>
       </Card>
+
+      {aiPlan && (
+        <Card className="space-y-2 border border-blue-100 bg-blue-50">
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-xs uppercase tracking-[0.25rem] text-blue-700">AI Plan</p>
+              <h2 className="font-semibold text-ink">{aiPlan.name}</h2>
+              <p className="text-xs text-slate-600">
+                Goal: {aiPlan.goal} · {aiPlan.durationMinutes} min · Focus: {aiPlan.focusAreas.join(", ")}
+              </p>
+              {aiPlan.notes && <p className="text-xs text-slate-600">{aiPlan.notes}</p>}
+            </div>
+            <Link to="/ai-builder" className="text-xs font-semibold text-blue-700 underline">
+              Regenerate
+            </Link>
+          </div>
+          <div className="space-y-1 text-xs text-slate-700">
+            {aiPlan.warmup?.length ? (
+              <p>
+                Warmup:{" "}
+                {aiPlan.warmup.map(ex => (
+                  <Link
+                    key={ex.exerciseId}
+                    to={`/exercise/${ex.exerciseId}`}
+                    className="mr-2 text-blue-700 underline"
+                  >
+                    {ex.displayName}
+                  </Link>
+                ))}
+              </p>
+            ) : null}
+            {aiPlan.main?.length ? (
+              <p>
+                Main:{" "}
+                {aiPlan.main.map(ex => (
+                  <Link
+                    key={ex.exerciseId}
+                    to={`/exercise/${ex.exerciseId}`}
+                    className="mr-2 text-blue-700 underline"
+                  >
+                    {ex.displayName}
+                  </Link>
+                ))}
+              </p>
+            ) : null}
+            {aiPlan.finisher?.length ? (
+              <p>
+                Finisher:{" "}
+                {aiPlan.finisher.map(ex => (
+                  <Link
+                    key={ex.exerciseId}
+                    to={`/exercise/${ex.exerciseId}`}
+                    className="mr-2 text-blue-700 underline"
+                  >
+                    {ex.displayName}
+                  </Link>
+                ))}
+              </p>
+            ) : null}
+          </div>
+        </Card>
+      )}
 
       <div className="space-y-4">
         {WORKOUT_TEMPLATES.map(template => (

@@ -4,6 +4,7 @@ import React from "react";
 const tabs = [
   { to: "/", label: "Workouts", icon: "🏋️" },
   { to: "/builder", label: "Builder", icon: "🛠️" },
+  { to: "/ai-builder", label: "AI Builder", icon: "🤖" },
   { to: "/history", label: "History", icon: "🕑" }
 ];
 
