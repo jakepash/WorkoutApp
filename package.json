@@ -8,6 +8,8 @@
     "dev:local": "PATH=\"$PWD/.local-node/bin:$PATH\" vite",
     "build": "vite build",
     "build:local": "PATH=\"$PWD/.local-node/bin:$PATH\" vite build",
+    "build:docs": "PATH=\"$PWD/.local-node/bin:$PATH\" vite build --outDir docs",
+    "postbuild:docs": "cp docs/index.html docs/404.html",
     "preview": "vite preview",
     "preview:local": "PATH=\"$PWD/.local-node/bin:$PATH\" vite preview",
     "lint": "eslint . --ext ts,tsx",
